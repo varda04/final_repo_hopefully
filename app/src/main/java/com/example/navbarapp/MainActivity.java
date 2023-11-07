@@ -21,7 +21,7 @@ import com.example.navbarapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     Button helloBtn;
-    Textview msg1, msg2;
+    TextView msg1, msg2;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
