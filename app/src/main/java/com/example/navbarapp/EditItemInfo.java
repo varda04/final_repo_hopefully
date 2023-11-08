@@ -1,21 +1,51 @@
 package com.example.navbarapp;
 
+
+
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import com.example.navbarapp.DBHelper;
 import android.content.Context;
-//wtf do I do here- pls revise later :")
-public class EditItemInfo {
-    private DBHelper dbHelper;
+import android.os.Bundle;
+import android.widget.EditText;
 
-    public EditItemInfo(Context context){
-        dbHelper= new DBHelper(context);
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+//wtf do I do here- pls revise later :")
+public class EditItemInfo extends AppCompatActivity {
+    private DBHelper dbHelper;
+    EditText edtname;
+    EditText edtno;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.edit_item_info);
+        edtname=findViewById(R.id.edtName);
+        edtno=findViewById(R.id.edtMobNo);
+
+
+
+
+
+
+
+
     }
-    SQLiteDatabase db= dbHelper.getReadableDatabase();
-    String Name="";
-    String MobileNo="";
-    Cursor cursor= db.query("Info", new String[] {"firstName"})
+
+
+
+
+
+
+
+
 
 
 

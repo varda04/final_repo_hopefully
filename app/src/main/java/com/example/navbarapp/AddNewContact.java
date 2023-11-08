@@ -1,4 +1,10 @@
 package com.example.navbarapp;
 
-public class AddNewContact {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AddNewContact extends AppCompatActivity {
+
+
+
+
 }

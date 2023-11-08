@@ -18,8 +18,8 @@ public class InfoAdapter extends BaseAdapter {
     Context nContext;
 
     public InfoAdapter(ArrayList<Info> list, Context context){
-        list=listofInfo;
-        context=nContext;
+        listofInfo=list;
+        nContext=context;
     }
 
     @Override
@@ -47,18 +47,23 @@ public class InfoAdapter extends BaseAdapter {
         TextView Name= convertView.findViewById(R.id.Name);
         TextView MobileNo= convertView.findViewById(R.id.Num);
 
+        Name.setText(listofInfo.get(position).firstName);
+        MobileNo.setText(listofInfo.get(position).mobileNo);
+
         Call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i= new Intent(Intent.ACTION_CALL);
                 i.setData(Uri.parse("tel:/"+listofInfo.get(position).mobileNo));
+                nContext.startActivity(i);
             }
         });
 
         Edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent()
+                Intent i=new Intent(nContext, EditItemInfo.class);
+                nContext.startActivity(i);
             }
         });
 
